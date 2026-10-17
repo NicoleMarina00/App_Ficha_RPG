@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Escudos · RpgServer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-stone-950 text-stone-100 antialiased">
+  <div id="app"></div>
+  <script>
+    window.PAGINA = {
+      titulo: "Escudos",
+      descricao: "Nome, descrição e valor de defesa.",
+      endpoint: "/api/escudos",
+      campos: [
+        { nome: "nome", label: "Nome", tipo: "text", obrigatorio: true },
+        { nome: "valorDefesa", label: "Valor de defesa", tipo: "text" },
+        { nome: "descricao", label: "Descrição", tipo: "textarea" }
+      ]
+    };
+  </script>
+  <script src="/js/ui.js"></script>
+</body>
+</html>

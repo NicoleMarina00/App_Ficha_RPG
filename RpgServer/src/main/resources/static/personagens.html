@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personagens · RpgServer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-stone-950 text-stone-100 antialiased">
+  <div id="app"></div>
+  <script>
+    window.PAGINA = {
+      titulo: "Personagens",
+      descricao: "Distribua até 20 pontos entre força, inteligência, destreza, sabedoria e carisma.",
+      limitePontos: 20,
+      endpoint: "/api/personagens",
+      campos: [
+        { nome: "nome", label: "Nome", tipo: "text", obrigatorio: true },
+        { nome: "forca", label: "Força", tipo: "number" },
+        { nome: "inteligencia", label: "Inteligência", tipo: "number" },
+        { nome: "destreza", label: "Destreza", tipo: "number" },
+        { nome: "sabedoria", label: "Sabedoria", tipo: "number" },
+        { nome: "carisma", label: "Carisma", tipo: "number" }
+      ],
+      relacoes: [
+        { nome: "racaJson", label: "Raça", endpoint: "/api/racas" },
+        { nome: "classeJson", label: "Classe", endpoint: "/api/classes" },
+        { nome: "armaJson", label: "Arma", endpoint: "/api/armas" },
+        { nome: "armaduraJson", label: "Armadura", endpoint: "/api/armaduras" },
+        { nome: "escudoJson", label: "Escudo", endpoint: "/api/escudos" },
+        { nome: "divindadeJson", label: "Divindade", endpoint: "/api/divindades" },
+        { nome: "periciaJson", label: "Perícia", endpoint: "/api/pericias" },
+        { nome: "feiticoJson", label: "Feitiço", endpoint: "/api/feiticos" }
+      ]
+    };
+  </script>
+  <script src="/js/ui.js"></script>
+</body>
+</html>

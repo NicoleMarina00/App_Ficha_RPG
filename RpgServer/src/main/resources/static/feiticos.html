@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feitiços · RpgServer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-stone-950 text-stone-100 antialiased">
+  <div id="app"></div>
+  <script>
+    window.PAGINA = {
+      titulo: "Feitiços",
+      descricao: "Nome e descrição.",
+      endpoint: "/api/feiticos",
+      campos: [
+        { nome: "nome", label: "Nome", tipo: "text", obrigatorio: true },
+        { nome: "descricao", label: "Descrição", tipo: "textarea" }
+      ]
+    };
+  </script>
+  <script src="/js/ui.js"></script>
+</body>
+</html>
